@@ -7,13 +7,15 @@
     <title>Game of Thrones</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles.css">
+
   <link rel="icon" href="favicon.ico">
   </head>
 <body ng-controller="MainCtrl">
   <div ng-hide="started">
     <h2>Game of Thrones Simulator</h2>
-    <h5>A story-based minigame by <a href="https://www.reddit.com/u/dSolver" target="_blank">dSolver</a>. You run a House, and try to survive.</h5>
+    <h5>A story-based minigame by Praesentatio. You run a House, and try to survive.</h5>
     <hr>
     <div style="padding: 2em">
       <h6>Step One: Build your House:</h6>
@@ -28,6 +30,7 @@
 
             </div>
           </div>
+          <br>
 
           <div class="row">
             <div class="medium-6 columns">
@@ -40,6 +43,7 @@
                 <input type="range" min=20 max=150 ng-model="family.soldiers">
               </label>
             </div>
+            <br>
             <div class="medium-6 columns">
               <div>Family Members: {{family.members.length}}/8</div>
               <div ng-repeat="member in family.members track by $index" class="deletable alert-box" ng-click="family.members.splice($index, 1)">{{member.name}} <a href="#" class="close">&times;</a></div>
@@ -61,6 +65,7 @@
           </div>
         </form>
       </div>
+      <br>
       <div class="row text-center">
         <div>
           <label>Pace: Slow
@@ -148,6 +153,8 @@
   <div ng-show="gameOver" class="modal">
     <h3>{{gameOver}}</h3>
   </div>
+
+  <p>“Never forget what you are, for surely the world will not. Make it your strength. Then it can never be your weakness. Armour yourself in it, and it will never be used to hurt you.”</p>
   <script src="index.js" charset="utf-8"></script>
 </body>
 

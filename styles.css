@@ -7,16 +7,17 @@ label>span{
   display: inline-block
 }
 body{
-  background-image:url("25515.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
+  background-color:#000000;
   font-family: 'Libre Baskerville', serif;
   color: white;
+  text-align: center;
 }
 h1{
   font-size: 5.625em;
 }
-
+p{
+  color: white;
+}
 .deletable{
   cursor: pointer;
   transition: all 0.5s ease;
@@ -57,7 +58,7 @@ h1{
 }
 
 .button{
-  background-color: #4CAF50; /* Green */
+  background-color: #4CAF50;
   border: none;
   color: white;
   padding: 16px 32px;
@@ -68,6 +69,11 @@ h1{
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
+}
+.button{
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
 }
 .button:hover {
   background-color: #4CAF50;
