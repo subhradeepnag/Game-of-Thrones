@@ -6,15 +6,18 @@
     <meta charset="utf-8">
     <title>Game of Thrones</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Libre+Baskerville&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="icon" href="favicon.ico">
   </head>
 <body ng-controller="MainCtrl">
   <div ng-hide="started">
     <h2>Game of Thrones Simulator</h2>
     <h5>A story-based minigame by <a href="https://www.reddit.com/u/dSolver" target="_blank">dSolver</a>. You run a House, and try to survive.</h5>
     <hr>
-    <div style="padding: 1em">
+    <div style="padding: 2em">
       <h6>Step One: Build your House:</h6>
+      <br>
       <div class="content">
         <form>
           <div class="row">
@@ -22,8 +25,10 @@
               <label>
                 <input type="text" ng-model="family.name" ng-blur="checkFamilyName()" placeholder="Name your House">
               </label>
+
             </div>
           </div>
+
           <div class="row">
             <div class="medium-6 columns">
               <label>
@@ -62,7 +67,9 @@
             <input type="range" min=0 max=19 ng-model="pace">Fast
           </label>
         </div>
-        <hr>
+        <br>
+        <br>
+
 
         <a href="#" class="button [radius round]" ng-disabled="family.name.length == 0 || family.members.length == 0" ng-click="start()">To the Throne!</a>
       </div>
@@ -122,14 +129,11 @@
     </div>
   </div>
   <div style="text-align:center; font-size:80%; color: #444;">
-    <hr>
+
     <div>
-      Like this game? Check out my games at <a href="http://plaza.dsolver.ca/#!/m/dSolver" target="_blank">The Incremental Games Plaza</a>
-    </div>
+
     <div>
-      While I'm at it, this game is completely Open Source (MIT License). Feel free to <a href="https://www.codepen.io/dSolver/pen/GJvaNp" target="_blank">Fork and Modify</a> it to your own tastes. Character and location names Copyright of George R.
-      R.
-      Martin.
+
     </div>
 
   </div>
